@@ -1,29 +1,35 @@
 ---
 layout: post
-title:  "첫번째 글 작성!"
+title:  "인트로, 깃을 섹시하게 써봅시다."
 date:   2022-04-18 16:08:28 +0900
-categories: Git
+categories: Git알못을 위한 깃린이코스(Git, Github 실습위주) 정리
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# 강의를 들어야 할 사람과 듣지 말아야 할 사람
+## GitHub에 대한 정의
+깃 허브는 '소스코드 전용 무료 클라우드 서비스'이다!
 
-Jekyll requires blog post files to be named according to the following format:
+## 강의를 들어야 할 사람
+1. 코드를 체계적으로 '정리'하고 싶은 사람
+2. Git을 통해 '협업'을 원하는 사람
+3. '오픈소스'를 활용해보고 싶은 사람
 
-`YEAR-MONTH-DAY-title.MARKUP`
+# 진행방식, 멘토 소개, 강의 후기
+## 진행방식
+1. 선 실습 -> 후 이해
+2. 근본부터 배움
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+# 우리가 git과 github를 알아야 하는 이유
+1. 개발자가 작성한 소스코드는 하나하나 '자산'이다!
+-> 개발자는 '기록', '저장', '관리' 습관을 들여야한다.
+2. 개발은 함께한다!
+3. 현업에서 거의 모든 회사에서 Git, Github를 사용한다!
+4. 개발자는 레고 조립가이다!
+5. 개발자들의 SNS이다!
+6. 오픈소스 활용 경험은 취업할 때 도움이 된다!
 
-Jekyll also offers powerful support for code snippets:
+# 저는 깃을 맨땅의 헤딩으로 배웠습니다
+1. GUI로 먼저 시작하지 말자!
+2. CLI(명령어 기반)으로 시작하자!
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+# Git으로 돌아가자. 게임에서 죽어도 계속 부활하는 Save Point
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
