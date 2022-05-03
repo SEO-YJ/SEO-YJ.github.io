@@ -1,0 +1,148 @@
+---
+layout: post
+title:  "Github에서 가능한 것들"
+date:   2022-05-03 18:20:00 +0900
+categories: Git알못을 위한 깃린이코스(Git, Github 실습위주) 정리
+---
+# 깃허브를 예쁘게 꾸며보자! 잔디를 3D로도 볼 수 있어?
+## 깃허브를 꾸며보는 것도 좋을 것 같다
+장점
+1. 면접자의 관점에서 
+## 깃허브 페이지 구성
+1. 프로필 설정
+소개 페이지를 만드는 방법
+1) 본인의 닉네임과 동일한 레포지토리를 만들면 된다.
+
+Repository name을 닉네임과 동일하게 작성하면 아래와 같은 문구가 나온다.
+SEO-YJ/SEO-YJ is a ✨special ✨ repository that you can use to add a README.md to your GitHub profile. Make sure it’s public and initialize it with a README to get started.
+2) public으로 만들어준다.
+    private으로 하면 다른 사람이 볼 수 없겠지?
+3) README file 추가
+4) main 페이지에 README file이 추가가 된다.
+    Hi there 👋
+5) 연필 이모티콘을 눌러 README 파일의 코드를 수정해준다.
+
+2. Am I Owl
+내가 커밋을 하는 시간을 기준으로 아침형 인간인지, 올빼미형 인간인지 알려주는 것
+
+관련 링크
+https://github.com/techinpark/productive-box
+
+3) 3D로 커밋 보기
+크롬 확장 프로그램으로 볼 수 있음.
+확장 프로그램이 깔린 로컬에서만 볼 수 있지,
+깔려 있지 않으면 볼 수 없다.
+
+관련 링크
+https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien
+
+4) Octotree
+깃허브에서 쉽게 코드를 볼 수 있는 툴
+깃허브 왼쪽에서 쉽게 소스코드를 확인 할 수 있다.
+
+관련 링크
+https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc/related?hl=ko
+
+5) 협업의 기여도 확인
+방법
+1. 프로젝트 Repository 들어가기
+2. Insights -> contributors
+3. 기여한 사람들의 목록이 나온다.
+4. 협업을 할 때, 나와 함께 하는 사람들의 기여도를 확인할 수 있다.
+
+# Pro 설정
+대학생은 Pro 혜택이 가능하다.
+
+관련 링크
+https://education.github.com/
+    
+## 지금까지 배운 명령어 정리
+### git --version
+: 현재 로컬에 설치된 git 버전관리 툴의 버전을 확인할 수 있는 명령어
+
+### git config --global init.defaultBranch main
+: git의 root 브랜치가 master -> main으로 변경되었으므로,
+main으로 초기에 세팅해주는 명령어
+1회만 명령해주면 된다.
+
+### git config --global user.name "YUJUN SEO"
+: 현재 로컬의 git의 이름을 환경 설정 해주는 명령어
+
+### git config --global user.email "yujun@~"
+: 현재 로컬의 git의 이메일을 환경 설정 해주는 명령어
+
+### git config --list
+: 환경 설정 세팅을 확인하는 명령어
+
+### git init
+: 폴더 안에 git 파일을 넣어 git으로 관리해주는 명령어
+(사진사 고용)
+* 강의 자료
+1) .git 폴더 생성
+2) .git 폴더가 생성된 폴더는 git이 관리하기 시작함
+
+### git add .
+: 현재까지 수행한 저장된 파일들을 임시의 공간에 '모두' 저장하는 명령어
+( 사진에 찍힐 사람들을 한꺼번에 모으는 명령어)
+* 강의 자료
+1) 모든 파일 스테이징 (말이 어렵지만 '추적'을 시작한다라고 보면 된다.)
+
+### git add <file명>
+: 현재까지 수행한 저장된 파일 중 '특정 파일'을 임시의 공간에 저장하는 명령어
+( 사진에 찍힐 사람들 중 특정 사람들을 골라 모으는 명령어)
+
+### git commit -m "message"
+: git add를 통해 임시로 저장된 파일들을 버전으로 관리하여 저장하는 명령어
+( 사진의 이름, 저장된 파일들, 로컬에 저장된 환경 상태, 날짜 등을 확인 가능)
+* 강의 자료
+1) message 이름으로 현재 추적하고 있는 코드들을 '찰칵'
+
+### git log
+: 현재까지 git commit 명령어로 버전 관리된 파일들을 리스트로 확인하는 명령어
+( 앨범)
+* 강의 자료
+1) 커밋 로그를 확인
+
+### git status
+: 프로젝트 내부의 파일들이 '임시의 공간'에 저장되었는지 확인하는 명령어
+* 강의 자료
+1) 현재 git의 상태를 보여줌
+
+### git rm --cached <file>
+: git add 명령어를 통해 임시의 공간에 저장된 파일들 중, 
+특정 파일을 선택해 임시의 공간에서 제거하는 명령어
+(너 나와봐!)
+
+### git restore
+: git add를 통해 임시의 공간에 파일을 저장해 놓았는데,
+저장한 파일을 수정하였다가 다시 add를 명령했던 상태로 돌아가고 싶을 때, 사용하는 명령어
+
+### git reset --hard 커밋해쉬코드(번호)
+: 이전 commit으로 되돌리고 싶을때 사용하는 명령어
+* 강의 자료
+1) 커밋 번호에 해당하는 커밋으로 코드를 롤백
+
+### git reset --hard
+: commit을 한 후에, 파일들을 수정하던 중 다시 이전 'commit'의 상태로 파일들을 되돌리고 싶을 때 사용하는 명령어
+
+### git remote add origin https://github.com/.... 
+라는 명령어를 명령해주면 된다.
+git remote add origin (주소)
+주소 부분은 Quick setup -- if you've done this kind of thing before
+의 HTTPS 부분의 주소를 복사해서 넣어줘도 된다.
+3. 리모트에 로컬의 커밋한 내용들을 보내고 싶을 때 사용하는 명령어
+
+### git push origin main
+4. commit을 확인해보고 싶으면, commits 부분을 확인하면 된다.
+
+### git clone 레포지토리주소
+리모트에 있는 레포지토리 파일들을 복사해서 가져올 수 있다.
+
+### git pull origin main
+서버 자체에서 변경이 일어났을 때 가져오는 방법
+ex> Add readme
+
+### git reset --hard 커밋해쉬코드(번호)
+이전 커밋으로 돌아가는 것도 가능하고,
+다시 앞의 커밋으로 되돌리는 것도 가능하다.
+
