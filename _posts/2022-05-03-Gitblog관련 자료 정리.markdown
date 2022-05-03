@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "GitBlog관련 자료 정리"
+date:   2022-05-03 17:18:00 +0900
+categories: GitBlog
+---
+# GitBlog에 마크다운 파일이 올라가지 않을 경우
+1. 제목의 형식을 '년-월-일-제목.markdown'으로 되어있는지 확인하자!
+
+관련 링크
+https://devyuseon.github.io/github%20blog/githubblog-post-not-shown/
+
