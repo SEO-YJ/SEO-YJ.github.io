@@ -10,3 +10,4 @@ categories: GitBlog
 관련 링크
 https://devyuseon.github.io/github%20blog/githubblog-post-not-shown/
 
+2. 위 방법으로 안 될 경우, 새로운 게시글 파일을 만들어서 다시, add->commit->push를 진행해보자.
