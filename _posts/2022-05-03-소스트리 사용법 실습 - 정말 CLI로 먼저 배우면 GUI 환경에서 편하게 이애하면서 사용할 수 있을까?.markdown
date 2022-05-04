@@ -5,7 +5,28 @@ date:   2022-05-03 18:59:00 +0900
 categories: Git알못을 위한 깃린이코스(Git, Github 실습위주) 정리
 ---
 # 소스트리 설치
-    
+## CLI로 먼저 배워야 하는 이유
+근본이 '명령어'이다.
+
+## GUI 깃 프로그램의 대표 소스트리
+CLI를 배웠으니, GUI로 한번 해보자.
+
+## GUI 다운로드
+1. 구글 크롬 브라우저에 'sourcetree install' 검색
+2. 다운로드
+
+# 소스트리의 활용(add, commit, push, remote, pull, log)
+## 소스트리와 터미널의 비교
+git add . = 스테이지에 올리기
+git commit -m "message" = 커밋
+git log = 히스토리
+git reset --hard = 히스토리 -> 커밋 우클릭 -> main 를 이 커밋으로 초기화
+git add remote origin 리포지토리주소 = 설정 -> 원격 -> 추가 -> 깃허브에 리포지토리 생성 후 주소 입력
+git push origin main = 푸시
+git clone 리포지토리주소 = 새로만들기 -> 저장소 복제 
+git pull origin main = 풀
+
+
 ## 지금까지 배운 명령어 정리
 ### git --version
 : 현재 로컬에 설치된 git 버전관리 툴의 버전을 확인할 수 있는 명령어
