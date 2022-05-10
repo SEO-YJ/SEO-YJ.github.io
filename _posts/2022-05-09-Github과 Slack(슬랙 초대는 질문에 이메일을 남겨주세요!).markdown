@@ -26,6 +26,26 @@ categories: Git알못을 위한 깃린이코스(Git, Github 실습위주) 정리
 
 성공!
 
+## 나의 Slack 워크스페이스를 만들어보자!
+용도: 내 깃허브의 이벤트를 알림받아 볼 워크스페이스 생성
+이름: SwiftWorld
+### Slack 무료 평가앱 다운로드
+자주 사용하는 이메일을 통해, Slack앱을 맥북에 다운 받는다.
+
+### 앱 추가
+Slack 찾아보기 -> 앱 -> Github
+여기서 Slack 깃허브 앱을 추가해서 워크스페이스에 저장해놓는다. (무료판은 10개 이하의 앱만 추가 가능하다.)
+
+### 나의 리포지토리 추가
+1. /github subscrive SEO-YJ/리포지토리 이름
+2. connect Github account
+3. Enter code
+4. Install Github App
+5. Only select repositories -> 리포지토리 선택
+6. /github subscrive SEO-YJ/리포지토리 이름 다시 입력
+
+
+
 ## 지금까지 배운 명령어 정리
 ### git --version
 : 현재 로컬에 설치된 git 버전관리 툴의 버전을 확인할 수 있는 명령어
