@@ -168,9 +168,94 @@ ProTip: The source code and content files for this site can be found in the /doc
 ProTip: 당신이 소스 코드나 내용 파일들을 복사하거나 배우고 싶으면, 이 사이트를 위한 소스 코드와 내용 파일들을 /docs 폴더에서 찾을 수 있다.
 
 ### Starting Fresh
+Starting with an empty folder and Gemfile you’ll need to copy or re-create this default _config.yml file. For a full explanation of every setting be sure to read the Configuration section.
+빈 폴더와 Gemfile을 가지고 시작하여, 이 기본 _config.yml 파일을 복사하거나, 재생성 해야 한다. 모든 설정에 대한 모든 설명은 Configuration section을 참조하자.
+
+From v4.5.0 onwards, Minimal Mistakes theme-gem comes bundled with the necessary data files for localization. They will be picked up automatically if you have the jekyll-data plugin installed. If you’re hosting on GitHub Pages, you can copy the _data/ui-text.yml file into your repository for the localization feature to work.
+4.5.0 버전 이후로, Minimal Mistakes 테마의 gem이 현지화에 필수적인 데이터 파일과 함께 번들로 제공된다.
+
+내 생각
+: 버전 4.5.0 이후부터는, Minimal Mistakes에서 gem과 현지화에 필수적인 데이터들을 함께 번들로 제공한다. 
+궁금한 점
+1. 현지화?
+2. gem
+
+gem에 대한 간단한 공부
+1. gem은 '루비 라이브러리'이다. 라이브러리는 필요한 기능을 가져와 추가할 수 있다.
+2. 여기서 theme-gem(테마 젬)이라고 했다. 
+그러면, 테마 기능을 루비 라이브러리로 가져오는 것이겠네? 그러면, 여러 테마들이 루비 라이브러리에 있고, 우리는 그 중에 원하는 테마를 선택하여 루비 라이브러리에서 가져오는 것인가?
+3. 인터넷에서 자동 설치된다.
+위에서 공부할 때 "Gemfile"에 명시하면, 자동으로 가져온다고 했다. gemfile에 원하는 gem을 명시하면 자동으로 가져오는 것인가?
+Gemfile은 텍스트 파일로써, gem "..." 으로 명시되어 있다. 여기에 작성하면, 가져오는 것 같은데....?
+
+당신이 Jekyll-data plugin이 설치되어 있으면 그것들은 자동적으로 선택된다.
+
+내 생각
+그것들 = 번들(Minimal Mistakes 테마 gem, 현지화에 필수적인 데이터 파일들)
+Jekyll-data plugin이 설치되어있으면, 이것들을 가져온다는 것 같다.
+
+궁금한 점
+Jekyll-data plugin은 어디서 설치하지?
+
+만약 당신이 Github 페이지들에서 호스팅하고 있으면, 당신의 리포지토리로 _data/ui-text.yml 파일들을 복사하여, 현지화 기능이 작동하도록 할 수 있다.
+
+내 생각
+현재 내 리포지토리는 
+아래 깃허브를 포크하여 나의 리포지토리로 가져온 것이다.
+https://github.com/mmistakes/minimal-mistakes
+이를 클론하여 내 로컬로 가져왔다.
+내 로컬 내의 파일들을 확인해보니 _data/ui-text.yml 파일이 담겨있다.
+
+파일을 확인해보니,
+User interface text and labels
+글씨와 라벨들의 인터페이스를 관리해주는 부분 같다.
+
+여기서 말하는 현지화 기능은 => 블로그의 텍스트, 라벨을 관리해 줄 수 있다.
+
+You’ll need to create and edit these data files to customize them:
+
+_data/ui-text.yml - UI text documentation
+_data/navigation.yml - navigation documentation
+
+당신은 이 데이터 파일들을 생성하고 편집하여 당신의 블로그를 커스텀 해야한다.
+
+내 생각
+these data files 
+1. _data/ui-text.yml - UI text documentation
+https://mmistakes.github.io/minimal-mistakes/docs/ui-text/
+사이트의 글자, 라벨들을 관리하는 파일
+
+2. _data/navigation.yml - navigation documentation
+https://mmistakes.github.io/minimal-mistakes/docs/navigation/
+사이트의 이동(다음 페이지, 시작 페이지 등)을 관리하는 파일
 
 ### Starting from jekyll new
+Scaffolding out a site with the "jekyll new" command requires you to modify a few files that it creates.
+"jekyll new" 명령으로 만든 스캐폴딩 기술이 적용된 사이트는 생성된 몇 개의 파일들을 수정하길 요구한다.
+
+Edit _config.yml. Then:
+
+Replace <site root>/index.md with a modified Minimal Mistakes index.html. Be sure to enable pagination if using the home layout by adding the necessary lines to _config.yml.
+Change layout: post in _posts/0000-00-00-welcome-to-jekyll.markdown to layout: single.
+Remove about.md, or at the very least change layout: page to layout: single and remove references to icon-github.html (or copy to your _includes if using it).
+_config.yml파일을 수정한다. 그러면:
+<site root>/index.md 파일을 수정된 Minimal Mistakes index.html 파일로 변경한다.
+홈 레이아웃을 사용하는 경우, _config.yml 파일에 필수적인 줄들을 추가하여, 페이지 번호 매기기를 활성화해야한다.
+레이아웃 변경: _post 폴더 내에 "0000-00-00-welcome-to-jekyll.markdown"파일 형식으로 게시글을 생성: 1개씩
+about.md를 제거하거나 가장 최소로 레이아웃 변경은 "layout: page"를 "layout: single"로 변경하고, icon-github.html에 대한 참조들을 제거하라. (사용하는 경우 당신의 _includes폴더에 복사)
+
+내 생각
+1. Minimal Mistakes index.html이 로컬 폴더에 저장되어 있다.
+2. 번호 매기기는 아직 어떻게 하는지 모르겠다.
+3. post폴더에 "0000-00-00-welcome-to-jekyll.markdown"파일 형식으로 1개씩 생성하고 푸시를 진행하면, 블로그에 게시글이 1개씩 생성되는 것을 확인할 수 있다.
+4. 현재 _config.yml은 layout: single로 설정되어 있다.
+
+자료
+1. 스캐폴딩 기술 정리
+https://en.wikipedia.org/wiki/Scaffold_(programming)#Scaffolding_in_Ruby_on_Rails
+
 ### Migrating to Gem Version
+
 ### Update Gemfile
 
 
