@@ -155,9 +155,20 @@ Note: 테마는 당신의 Gemfile에 설치되어야 할 필요가 있고, _conf
 
     당신이 minimal-mistakes-kekyll 리포지토리를 포크하거나 다운로드 했다면, 당신은 다음 폴더들과 파일들을 안전하게 제거할 수 있다.
     
+    Note: If forking the theme be sure to update Gemfile as well. The one found at the root of the project is for building the theme’s Ruby gem and is missing dependencies. To properly setup a Gemfile with the theme, consult the “Install Dependencies” section.
+    참고: 테마를 포크하는 경우, Gemfile 또한 업데이트 해야 한다. 프로젝트의 루트에서 발견된 것은 테마의 루비 gem을 구축하기 위한 것이고, 종속성이 없을 것이다.
+        테마와 함께 Gemfile을 적절히 설정하려면, "Install Dependencies" 섹션을 참조하자.
+    
     
 ## Setup Your Site
+Depending on the path you took installing Minimal Mistakes you’ll setup things a little differently.
+Minimal Mistakes를 설치하는 경로에 따라, 당신은 약간 다르게 설정할 것이다.
+
+ProTip: The source code and content files for this site can be found in the /docs folder if you want to copy or learn from them.
+ProTip: 당신이 소스 코드나 내용 파일들을 복사하거나 배우고 싶으면, 이 사이트를 위한 소스 코드와 내용 파일들을 /docs 폴더에서 찾을 수 있다.
+
 ### Starting Fresh
+
 ### Starting from jekyll new
 ### Migrating to Gem Version
 ### Update Gemfile
