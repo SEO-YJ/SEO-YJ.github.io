@@ -97,6 +97,7 @@ Note: 테마는 당신의 Gemfile에 설치되어야 할 필요가 있고, _conf
     _config.yml file. Remove any other theme: or remote_theme: entry.
     당신의 _config.yml 파일에 "mmistakes/minimal-mistakes@4.24.0를 추가해라.
     다른 theme이나 remote_theme은 지워라.
+    
     (글쓴이는 
      "# theme                  : "minimal-mistakes-jekyll"
      "# remote_theme           : "mmistakes/minimal-mistakes"
@@ -104,8 +105,57 @@ Note: 테마는 당신의 Gemfile에 설치되어야 할 필요가 있고, _conf
      remote_theme             :  mmistakes/minimal-mistakes@4.24.0
      를 추가하였다.)
     
-### Remove the Unnecessary
+    You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., mmistakes/minimal-mistakes@4.9.0 or mmistakes/minimal-mistakes@bbf3cbc5fd64a3e1885f3f99eb90ba92af84063d). This is useful when rolling back to older versions of the theme. If you don’t specify a Git ref, the latest on master will be used.
+    당신은 또한 선택적으로 branch, tag, commit을 @나 Git ref를 글에 덧붙여서 사용하는 것을 명시할 수 있다.
+    이것은 테마의 예전 버전들로 되돌릴 때 유용하다. 당신이 Git ref를 명시하지 않았다면, 최근 브랜치가 사용될 것 이다.
+    
+    Looking for an example? 
+    Use the Minimal Mistakes remote theme starter for the quickest method of getting a GitHub Pages hosted site up and running. Generate a new repository from the starter, replace sample content with your own, and configure as needed.
+    예시를 찾아볼까?
+    Minimal Mistakes remote theme starter를 사용하여 GitHub Pages 호스팅 된 사이트를 가장 빨리 시작하고 실행해보세요. 
+    starter에서 새로운 리포지토리를 생성하고, 샘플 내용을 당신의 내용으로 대체하고, 필요에 따라 구성해보자.
+    Minimal Mistakes remote theme starter 페이지
+    https://github.com/mmistakes/mm-github-pages-starter/generate
+    
+    Note: Your Jekyll site should be viewable immediately at http://USERNAME.github.io. If it’s not, you can force a rebuild by Customizing Your Site (see below for more details).
+    참고: 당신의 Jekyll 사이트는 http://SEO-YJ(깃 허브 닉네임).github.io 링크에서 즉각적으로 볼 수 있다. 그렇지 않으면, 당신은 당신의 사이트를 재정의하여 재구축 할 수 있다. (자세한 내용은 아래를 보세요.)
+    
+    If you’re hosting several Jekyll based sites under the same GitHub username you will have to use Project Pages instead of User Pages. Essentially you rename the repo to something other than USERNAME.github.io and create a gh-pages branch off of master. For more details on how to set things up check GitHub’s documentation.
+    당신이 같은 GitHub 닉네임으로 여러 개의 Jekyll을 기반으로 하는 사이트들을 호스팅하고 있으면, 당신은 사용자 페이지들 대신에 프로젝트 페이지들을 사용해야 할 것 이다.
+    필수적으로 당신은 "깃허브 닉네임.github.io"이름 대신에 다른 이름으로 리포지토리의 이름을 바꿔야하고, master 브랜치에서 gh-pages 브랜치를 따로 생성해야 한다. 설정 방법에 대한 자세한 내용은 깃허브 공식문서를 참조하자.
+    
+    You can also install the theme by copying all of the theme files1 into your project.
 
+    To do so fork the Minimal Mistakes theme, then rename the repo to USERNAME.github.io — replacing USERNAME with your GitHub username.
+
+    당신은 또한 당신의 프로젝트 안에 files1 테마의 모든 파일을 복붙하여 테마를 설치 할 수도 있다.
+    위 방법으로 하려면 Minimal Mistakes 테마를 fork하고, USERNAME.github.io로 리포지토리의 이름을 변경해라 - 당신의 깃허브 닉네임을 USERNAME으로 대체한다.
+    
+    GitHub Pages Alternatives: Looking to host your site for free and install/update the theme painlessly? 
+    Netlify, GitLab Pages, and Continuous Integration (CI) services have you covered. In most cases all you need to do is connect your repository to them, create a simple configuration file, and install the theme following the Ruby Gem Method above.
+    깃허브 페이지 대체: 당신의 사이트를 무료로 호스트하고 테마를 쉽게 설치/업데이트 하는 것을 찾고 싶은가?
+    Netlify, GitLab pages, 계속적인 통합(CI) 서비스들은 커버해 줄 것이다. 
+    
+    Netlify: Netlify는 웹 애플리케이션 및 정적 웹사이트를 위한 호스팅 및 서버리스 백엔드 서비스를 제공하는 샌프란시스코 기반 클라우드 컴퓨팅 회사입니다.
+    당신이 필요로 할 대부분의 경우는 위 서비스들을 리포지토리로 연결하고, 간단한 구성 파일을 생성하고, 위의 Ruby Gem 메소드를 따른 테마를 설치하면 된다.
+    
+### Remove the Unnecessary
+    If you forked or downloaded the minimal-mistakes-jekyll repo you can safely remove the following folders and files:
+
+    * .editorconfig
+    * .gitattributes
+    * .github
+    * /docs
+    * /test
+    * CHANGELOG.md
+    * minimal-mistakes-jekyll.gemspec
+    * README.md
+    * screenshot-layouts.png
+    * screenshot.png
+
+    당신이 minimal-mistakes-kekyll 리포지토리를 포크하거나 다운로드 했다면, 당신은 다음 폴더들과 파일들을 안전하게 제거할 수 있다.
+    
+    
 ## Setup Your Site
 ### Starting Fresh
 ### Starting from jekyll new
