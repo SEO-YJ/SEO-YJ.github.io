@@ -16,7 +16,6 @@ Minimal Mistakes has been developed as a Gem-based theme for easier use, and 100
 
 If you enjoy this theme, please consider sponsoring me to continue developing and maintaining it.
 
-# 빠른 시작 가이드
 Minimal Mistakes는 Gem-based theme를 쉽게 사용하기 위해 이를 기반으로 개발되고 있고, 
 원격 테마를 사용할 때 깃 허브와 100% 호환이 된다.
 
@@ -118,7 +117,7 @@ Note: 테마는 당신의 Gemfile에 설치되어야 할 필요가 있고, _conf
     https://github.com/mmistakes/mm-github-pages-starter/generate
     
     Note: Your Jekyll site should be viewable immediately at http://USERNAME.github.io. If it’s not, you can force a rebuild by Customizing Your Site (see below for more details).
-    참고: 당신의 Jekyll 사이트는 http://SEO-YJ(깃 허브 닉네임).github.io 링크에서 즉각적으로 볼 수 있다. 그렇지 않으면, 당신은 당신의 사이트를 재정의하여 재구축 할 수 있다. (자세한 내용은 아래를 보세요.)
+    Note: 당신의 Jekyll 사이트는 http://SEO-YJ(깃 허브 닉네임).github.io 링크에서 즉각적으로 볼 수 있다. 그렇지 않으면, 당신은 당신의 사이트를 재정의하여 재구축 하게 만들 수 있다. (자세한 내용은 아래를 보세요.)
     
     If you’re hosting several Jekyll based sites under the same GitHub username you will have to use Project Pages instead of User Pages. Essentially you rename the repo to something other than USERNAME.github.io and create a gh-pages branch off of master. For more details on how to set things up check GitHub’s documentation.
     당신이 같은 GitHub 닉네임으로 여러 개의 Jekyll을 기반으로 하는 사이트들을 호스팅하고 있으면, 당신은 사용자 페이지들 대신에 프로젝트 페이지들을 사용해야 할 것 이다.
@@ -130,14 +129,16 @@ Note: 테마는 당신의 Gemfile에 설치되어야 할 필요가 있고, _conf
 
     당신은 또한 당신의 프로젝트 안에 files1 테마의 모든 파일을 복붙하여 테마를 설치 할 수도 있다.
     위 방법으로 하려면 Minimal Mistakes 테마를 fork하고, USERNAME.github.io로 리포지토리의 이름을 변경해라 - 당신의 깃허브 닉네임을 USERNAME으로 대체한다.
+    내 생각
+    1. 필자가 현재 이 방법으로 Minimal Mistakes의 테마를 가져와 블로그를 만들었다.
     
     GitHub Pages Alternatives: Looking to host your site for free and install/update the theme painlessly? 
     Netlify, GitLab Pages, and Continuous Integration (CI) services have you covered. In most cases all you need to do is connect your repository to them, create a simple configuration file, and install the theme following the Ruby Gem Method above.
     깃허브 페이지 대체: 당신의 사이트를 무료로 호스트하고 테마를 쉽게 설치/업데이트 하는 것을 찾고 싶은가?
-    Netlify, GitLab pages, 계속적인 통합(CI) 서비스들은 커버해 줄 것이다. 
+    Netlify, GitLab pages, 계속적인 통합(CI) 서비스들은 커버해 줄 것이다. 당신이 필요로 할 대부분의 경우는 위 서비스들을 리포지토리로 연결하고, 간단한 구성 파일을 생성하고, 위의 Ruby Gem 메소드를 따른 테마를 설치하면 된다.
     
     Netlify: Netlify는 웹 애플리케이션 및 정적 웹사이트를 위한 호스팅 및 서버리스 백엔드 서비스를 제공하는 샌프란시스코 기반 클라우드 컴퓨팅 회사입니다.
-    당신이 필요로 할 대부분의 경우는 위 서비스들을 리포지토리로 연결하고, 간단한 구성 파일을 생성하고, 위의 Ruby Gem 메소드를 따른 테마를 설치하면 된다.
+    
     
 ### Remove the Unnecessary
     If you forked or downloaded the minimal-mistakes-jekyll repo you can safely remove the following folders and files:
@@ -156,7 +157,7 @@ Note: 테마는 당신의 Gemfile에 설치되어야 할 필요가 있고, _conf
     당신이 minimal-mistakes-kekyll 리포지토리를 포크하거나 다운로드 했다면, 당신은 다음 폴더들과 파일들을 안전하게 제거할 수 있다.
     
     Note: If forking the theme be sure to update Gemfile as well. The one found at the root of the project is for building the theme’s Ruby gem and is missing dependencies. To properly setup a Gemfile with the theme, consult the “Install Dependencies” section.
-    참고: 테마를 포크하는 경우, Gemfile 또한 업데이트 해야 한다. 프로젝트의 루트에서 발견된 것은 테마의 루비 gem을 구축하기 위한 것이고, 종속성이 없을 것이다.
+    Note: 테마를 포크하는 경우, Gemfile 또한 업데이트 해야 한다. 프로젝트의 루트에서 발견된 것은 테마의 루비 gem을 구축하기 위한 것이고, 종속성이 없을 것이다.
         테마와 함께 Gemfile을 적절히 설정하려면, "Install Dependencies" 섹션을 참조하자.
     
     
@@ -255,6 +256,41 @@ about.md를 제거하거나 가장 최소로 레이아웃 변경은 "layout: pag
 https://en.wikipedia.org/wiki/Scaffold_(programming)#Scaffolding_in_Ruby_on_Rails
 
 ### Migrating to Gem Version
+If you’re migrating a site already using Minimal Mistakes and haven’t customized any of the theme files things upgrading will be easier for you.
+만약 당신이 이미 Minimal Mistakes를 사용하여 사이트를 옮기고, 어떠한 테마 파일로도 커스텀하지 않았다면 쉽게 업그레이드 할 수 있다.
+내 생각
+1. 나는 Minimal Mistakes를 포크하여 사이트를 만들었다.
+2. 아직 테마 파일들을 커스텀하지 않은 것 같다.
+3. 그러면 업그레이드가 쉽다는데, 버전 업그레이드 말하는 것이겠지?
+
+Start by removing the following folders and any files within them:
+다음 폴더들과 폴더 내의 모든 파일들을 제거하는 것 부터 시작해라:
+
+├── _includes
+├── _layouts
+├── _sass
+├── assets
+|  ├── css
+|  ├── fonts
+|  └── js
+
+내 생각
+1. 일단 제거해 보았다.
+
+You won’t need these anymore as they’re bundled with the theme gem — unless you intend to override them.
+당신에게 테마 gem과 함께 제공되므로 더 이상 위 폴더들이 필요하지 않다
+- 당신이 그것들을 무시할 의도가 아니라면
+override them 링크
+https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+내 생각
+1. includes, layouts, sass, assets 폴더들은 테마 gem 라이브러리에서 제공이된다.
+2. 따라서, 폴더들에 필요하지 않다.
+
+Note: When clearing out the assets folder be sure to leave any files you’ve added and need. This includes images, CSS, or JavaScript that aren’t already bundled in the theme.
+Note: assets 폴더를 청소할 때, 당신이 추가하거나 필요로 하는 어떠한 파일들도 없어야 한다.
+이것은 테마에 아직 제공되지 않은 사진들, CSS, 또는 JavaScript 파일들을 포함한다.
+
 
 ### Update Gemfile
 
