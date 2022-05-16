@@ -291,16 +291,114 @@ Note: When clearing out the assets folder be sure to leave any files you’ve ad
 Note: assets 폴더를 청소할 때, 당신이 추가하거나 필요로 하는 어떠한 파일들도 없어야 한다.
 이것은 테마에 아직 제공되지 않은 사진들, CSS, 또는 JavaScript 파일들을 포함한다.
 
+내 생각
+1. 일단 위 폴더 4개 지운후 깃 리포지토리에 푸시하여 테스트 해보았다.
+2. 결과는 전과 동일한 블로그 환경이었다.
+3. 제거해도 상관 없는 건가?? 어짜피 gem에서 제공이 되니까...?
+
+From v4.5.0 onwards, the default language files are read-in automatically via the jekyll-data plugin if it’s installed. For sites hosted with GitHub Pages, you still need to copy the _data/ui-text.yml file because the jekyll-data plugin is unsupported on GitHub Pages.
+4.5.0 버전 부터는, 기본 언어 파일들은 만약 jekyll-data plugin이 설치되어있으면, 이것을 통하여 자동적으로 읽힌다. 깃허브 페이지로 호스팅 된 사이트들은, 당신은 여전히 _data/ui-text.yml 파일을 복사해야 한다. 왜냐하면 jekyll-data plugin이 깃허브 페이지들을 지원하지 않기 때문이다.
+
+내 생각
+1. _data/ui-text.yml 파일들은 아직 로컬에 저장되어있다.
+
+If you customized any of these files leave them alone, and only remove the untouched ones. If done correctly your modified versions should override the versions bundled with the theme and be used by Jekyll instead.
+당신이 이 파일들 중 하나를 사용자 정의한 경우에는 해당 파일은 그대로 두고, 오직 변경되지 않은 파일만 제거한다. 
+올바르게 수정되었으면, 당신의 수정된 버전들은 테마와 함께 번들된 버전들 보다 우선해야하며, 대신에 Jekyll이 사용해야 한다.
+
+내 생각
+1. 파일은 본인의 블로그에 맞게 수정한 파일이 있으면 해당 파일은 그대로 둔다.
+2. 위 폴더의 파일들 중 변경하지 않은 파일들은 제거한다.
+3. 수정한 파일은 우선해야하고 JeKyll이 사용해야 한다.
 
 ### Update Gemfile
+Replace gem "github-pages or gem "jekyll" with gem "jekyll", "~> 3.5". You’ll need the latest version of Jekyll for Minimal Mistakes to work and load all of the theme’s assets properly, this line forces Bundler to do that.
+gem "github-pages" 또는 gem "jekyll"을 gem "jekyll", "~> 3.5"로 대체한다. 당신은 테마의 모든 자료들을 제대로 올리고 작업하려면, Minimal Mistakes의 Jekyll의 최신 버전이 필요할 것이고, 이 줄은 Bundler에게 이렇게 하도록 강요한다.
 
+내 생각
+1. 이 문단은 Gemfile 버전을 업데이트 하는 것에 관련있는 것이다.
+2. 블로그 테마의 모든 자료들을 제대로 작동하게 하고, 로드하기 위해서는 Jekyll의 최신 버전이 필요하다. 그래서, 이 문단이 gem의 업데이트 방법을 알려주는 것이다.
 
-# Structure
+Add the Minimal Mistakes theme gem:
 
-# Installation
+gem "minimal-mistakes-jekyll"
 
-# Upgrading
+When finished your Gemfile should look something like this:
 
+source "https://rubygems.org"
 
+gem "jekyll", "~> 3.7"
+gem "minimal-mistakes-jekyll"
 
+Then run bundle update and add theme: minimal-mistakes-jekyll to your _config.yml.
 
+Minimal Mistakes 테마 gem을 추가하라: 
+
+gem "minimal-mistakes-jekyll"
+
+완료되면 당신의 Gemfile은 다음과 같이 보일 것이다:
+
+source "https://rubygems.org"
+
+gem "jekyll", "~> 3.7"
+gem "minimal-mistakes-jekyll"
+
+그런 다음 번들 업데이트를 실행하고 테마를 추가한다: 당신의 _config.yml 파일에 minimal-mistakes-jekyll을 추가한다.
+
+내 생각
+1. 일단 한 번 따라해보자.
+
+minimal-mistakes-jekyll 업데이트 방법
+1. Gemfile에 
+source "https://rubygems.org"
+
+gem "minimal-mistakes-jekyll"
+
+이렇게 추가하였다.
+
+2. Gemfile에 추가 후에 
+터미널에서 해당 폴더로 이동 후, "bundle update"를 명령 하였으나 실패
+
+3. 그냥 "bundle update"를 명령하면, 아래와 같이 해보라고 터머널에서 제시하여
+아래의 명령을 순서대로 입력
+
+bundle config set --local path 'vendor/bundle'
+bundle update
+
+4. ...
+Fetching jekyll-sass-converter 2.2.0
+Installing jekyll-sass-converter 2.2.0
+Fetching jekyll 4.2.2
+Installing jekyll 4.2.2
+Fetching jekyll-feed 0.16.0
+Fetching jekyll-include-cache 0.2.1
+Fetching jekyll-sitemap 1.4.0
+Installing jekyll-feed 0.16.0
+Installing jekyll-include-cache 0.2.1
+Installing jekyll-sitemap 1.4.0
+Fetching minimal-mistakes-jekyll 4.24.0
+Installing minimal-mistakes-jekyll 4.24.0
+Bundle updated!
+등의 결과들이 터미널에 나오면서 Gemfile 업데이트 성공
+
+v4 Breaking Change: Paths for image headers, overlays, teasers, galleries, and feature rows have changed and now require a full path. Instead of just "image: filename.jpg" you’ll need to use the full path eg: "image: /assets/images/filename.jpg". The preferred location is now "/assets/images/" but can be placed elsewhere or externally hosted. This applies to image references in _config.yml and author.yml as well.
+버전 4부터의 변화: image headers, overlays, teasers, galleries, 그리고 feature rows의 경로들은 변화되었고 이제 전체 경로가 필요하다. 
+단지 "image: filename.jpg" 대신에 당신은 (예: "image: /assets/images/filename.jpg")와 같은 전체 경로를 작성하는 것이 필요할 것이다.
+선호하는 주소는 "image: /assets/images/filename.jpg"와 같은 형식이지만, 다른 곳에 배치하거나 외부에서 호스트될 수 있다.
+이는 또한 _config.yml 파일과 author.yml 파일의 사진 참조에도 적용이된다.
+
+That’s it! If all goes well running bundle exec jekyll servee should spin-up your site.
+
+See "Structure page" for a list of theme files and what they do. ↩
+
+You could also run "bundle update jekyll" to update Jekyll. ↩
+
+다 됐다! 만약 "bundle exec jekyll serve" 명령으로 잘 동작하면 당신의 사이트를 시작할 수 있다.
+
+테마 파일들 및 테마 파일의 작업 목록은 "Structure page"를 참조하세요.
+
+당신은 "bundle update jekyll"을 명령하여 Jekyll을 업데이트 할 수도 있습니다.
+
+내 생각
+1. Structure 파이트에 테마 파일 들에 대해 배우자
+2. bundle update jekyll 명령을 통해 Jekyll을 업데이트 하자.
