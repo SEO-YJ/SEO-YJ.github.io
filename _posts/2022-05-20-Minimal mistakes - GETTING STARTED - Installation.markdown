@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Installation"
+title:  "Minimal mistakes - GETTING STARTED - Installation"
 date:   2022-05-20 07:18:00 +0900
 categories: Minimal Mistakes A Jekyll theme Guide -> GETTING STARTED
 ---

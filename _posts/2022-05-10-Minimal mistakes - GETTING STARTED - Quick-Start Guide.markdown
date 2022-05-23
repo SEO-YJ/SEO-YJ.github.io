@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Quick-Start Guide"
+title:  "Minimal mistakes - GETTING STARTED - Quick-Start Guide"
 date:   2022-05-10 16:51:00 +0900
 categories: Minimal Mistakes A Jekyll theme Guide -> GETTING STARTED
 ---

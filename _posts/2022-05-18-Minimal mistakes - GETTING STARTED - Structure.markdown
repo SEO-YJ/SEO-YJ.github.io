@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Structure"
+title:  "Minimal mistakes - GETTING STARTED - Structure"
 date:   2022-05-18 18:48:00 +0900
 categories: Minimal Mistakes A Jekyll theme Guide -> GETTING STARTED
 ---
