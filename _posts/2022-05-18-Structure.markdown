@@ -4,7 +4,7 @@ title:  "Structure"
 date:   2022-05-18 18:48:00 +0900
 categories: Minimal Mistakes A Jekyll theme Guide -> GETTING STARTED
 ---
-본 글은 'Git Blog'의 Jekyll Theme의 가이드라인을 해석하고 적용해는 것이 목적입니다.
+본 글은 'Git Blog'의 Jekyll Minimal Mistakes 테마의 가이드라인을 해석하고 적용해는 것이 목적입니다.
 이 글을 통해, Jekyll Theme를 사용하는 깃 블로그 유저분들이 본인만의 블로그를 꾸며 나가는데 도움이 되길 바랍니다!
 
 깃 블로그 테마 링크: 
