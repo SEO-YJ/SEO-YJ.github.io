@@ -212,7 +212,6 @@ at this point: 이 시점에서
 문법
 To force the browser to refresh with every change,
 문장 전체: to부정사의 부사적 용법 -> ~하도록
-
 to refresh: to부정사의 형용사적 용법 -> ~할
 매 변경마다 브라우저를 새로운 정보로 리프레시 하길 강요하려면,
 
@@ -224,7 +223,7 @@ The version of the site: 무생물의 소유격 -> 앞, 뒤 위치가 바뀐다.
 사이트의 버전
 
 ,instead of
-~대신에 로 주어 다음에 ,뒤의 문장을 해석하고 다음 문장 구성을 해석하자.
+~대신에 로 주어 다음에 ,뒤의 instead of 문장을 해석하고 다음 문장 구성을 해석하자.
 
 
 would like 명사 to 동사원형 목적어: 명사가 목적어를 동사원형하도록 하고 싶다.
