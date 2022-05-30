@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Jekyll - GETTING STARTED - Step by Step Tutorial"
-date:   2022-05-25 14:59:00 +0900
+title:  "Jekyll - GETTING STARTED - Step by Step Tutorial - 2. Liquid"
+date:   2022-05-26 14:59:00 +0900
 categories: Jekyll official documents
 ---
 본 글은 'Git Blog'의 Jekyll 공식문서를 해석하고 적용해는 것이 목적입니다.
