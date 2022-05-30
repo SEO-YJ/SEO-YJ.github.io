@@ -39,7 +39,8 @@ as: ~로써
 curly braces: 중괄호
 
 문법
-* to 부정사의 부사적 용법
+to 부정사의 부사적 용법
+
 ~하도록
 Objects(주어) tell(동사) Liquid(목적어) to output(출력 하도록) predefined variables as content on a page.
 
