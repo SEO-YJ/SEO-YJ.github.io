@@ -22,7 +22,7 @@ Create a new Markdown file named about.md in your site’s root folder.
 
 You could copy the contents of index and modify it for the About page. However, this creates duplicate code that has to be customized for each new page you add to your site.
 
-For example, adding a new stylesheet to your site would involve adding the link to the stylesheet to the <head> of each page. For sites with many pages, this is a waste of time.
+For example, adding a new stylesheet to your site would involve adding the link to the stylesheet to the "<head>" of each page. For sites with many pages, this is a waste of time.
 
 
 

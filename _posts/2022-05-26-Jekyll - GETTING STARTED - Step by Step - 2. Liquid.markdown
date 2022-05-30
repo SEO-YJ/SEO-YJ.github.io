@@ -24,13 +24,13 @@ Liquid is where Jekyll starts to get more interesting. It is a templating langua
 Liquid 언어는 Jekyll이 더 흥미를 얻기 시작하는 곳이다. Liquid 언어는 3가지 주요 구성요소들을 가진 템플릿 언어이다.
 
 ## Objects
-Objects tell Liquid to output predefined variables as content on a page. Use double curly braces for objects: {{ and }}.
+Objects tell Liquid to output predefined variables as content on a page. Use double curly braces for objects: "{{" and "}}".
 
-For example, {{ page.title }} displays the page.title variable.
+For example, "{{ page.title }}" displays the page.title variable.
 
-Objects는 Liquid 언어에게 미리 정의된 변수들을 페이지 위의 내용으로써 출력하도록 지시한다. objects를 위해 두개의 중괄호를 사용해라: {{ and }}
+Objects는 Liquid 언어에게 미리 정의된 변수들을 페이지 위의 내용으로써 출력하도록 지시한다. objects를 위해 두개의 중괄호를 사용해라: "{{" and "}}"
 
-예시, {{ page.title }}은 page.title 변수를 출력한다.
+예시, "{{ page.title }}"은 "page.title" 변수를 출력한다.
 
 단어
 tell: 지시하다
@@ -46,28 +46,31 @@ Objects(주어) tell(동사) Liquid(목적어) to output(출력 하도록) prede
 
 
 ## Tags
-Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: {% and %}.
+Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: "{%" and "%}".
 
 For example:
-
+<!--
 {% if page.show_sidebar %}
   <div class="sidebar">
     sidebar content
   </div>
 {% endif %}
+-->
 
 This displays the sidebar if the value of the show_sidebar page variable is true.
 
 Learn more about the tags available in Jekyll here.
 
-Tags는 템플릿의 논리 연산과 제어 흐름을 정의한다. tags를 위해 중괄호와 % 문자들을 사용해라: {% 와 %}.
+Tags는 템플릿의 논리 연산과 제어 흐름을 정의한다. tags를 위해 중괄호와 % 문자들을 사용해라: "{%" 와 "%}".
 
 예시:
+<!--
 {% if page.show_sidebar %} // page.show_sidebar를 보이면,
   <div class="sidebar">    
     sidebar content        // sidebar의 내용
   </div>
 {% endif %}                // 보이지 않으면 종료
+-->
 
 show_sidebar 페이지 변수의 값이 참이면 sidebar를 출력한다.
 
@@ -80,9 +83,9 @@ https://jekyllrb.com/docs/liquid/tags/
 Filters change the output of a Liquid object. They are used within an output and are separated by a |.
 
 For example:
-
+<!--
 {{ "hi" | capitalize }}
-
+-->
 This displays Hi instead of hi.
 
 Learn more about the filters available.
@@ -90,8 +93,9 @@ Learn more about the filters available.
 Filters는 Liquid object의 출력을 변화시킨다. Filters는 출력 안에서 사용되며 | 로 구분된다.
 
 예시:
-
+<!--
 {{ "hi" | capitalize }} // 아마, 필터의 |로 구분하여 대문자(HI)로 출력을 변화시키는 것 같다.
+-->
 
 위 코드는 hi 대신에 HI를 출력한다.
 
@@ -105,18 +109,23 @@ display: 출력하다
 ## Use Liquid
 Now, use Liquid to make your Hello World! text from Setup lowercase:
 
+<!--
 ...
 <h1>{{ "Hello World!" | downcase }}</h1>
 ...
+-->
 
 To make Jekyll process your changes, add front matter to the top of the page:
 
+<!--
 ---
 "# front matter tells Jekyll to process Liquid"
 ---
+-->
 
 Your HTML document should look like this:
 
+<!--
 ---
 ---
 
@@ -130,6 +139,7 @@ Your HTML document should look like this:
     <h1>{{ "Hello World!" | downcase }}</h1>
   </body>
 </html>
+-->
 
 When you reload your browser, you should see hello world!.
 
@@ -140,18 +150,23 @@ Next, you’ll learn more about frontmatter.
 
 
 이제, Setup 파트에서 만든 Hello World글자를 Liquid 언어를 사용하여 소문자로 만들어보자:
+<!--
  ...
 <h1>{{ "Hello World!" | downcase }}</h1> // 1. {{}}는 objects, 2. | downcase 는 filters
 ...
+-->
 
 당신이 변경한 것을 Jekyll이 처리하게 만드려면, 페이지의 위에 front matter을 추가해라.
 
+<!--
 ---
 "# 머리말은 Jekyll에게 Liquid를 처리하라고 지시한다"
 ---
+-->
 
 당신의 HTML 문서는 이것과 같이 보일 것 이다:
 
+<!--
 ---
 ---
 
@@ -165,6 +180,8 @@ Next, you’ll learn more about frontmatter.
     <h1>{{ "Hello World!" | downcase }}</h1>
   </body>
 </html>
+-->
+
 
 당신이 브라우저를 다시 로드하면, 당신은 "hello world!"를 볼 것이다.
 
