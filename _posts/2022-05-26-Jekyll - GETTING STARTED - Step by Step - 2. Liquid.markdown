@@ -62,9 +62,8 @@ Objects(주어) tell(동사) Liquid(목적어) to output(출력 하도록) prede
 
 ## Tags
 Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: 
-<!--
-"{%, %}".
--->
+
+github 빌드 에러로 인해 Tags 형태는 아래 예시 참조
 
 For example:
 <!--
@@ -80,9 +79,8 @@ This displays the sidebar if the value of the show_sidebar page variable is true
 Learn more about the tags available in Jekyll here.
 
 Tags는 템플릿의 논리 연산과 제어 흐름을 정의한다. tags를 위해 중괄호와 % 문자들을 사용해라: 
-<!--
-"{%" 와 "%}".
--->
+
+github 빌드 에러로 인해 Tags 형태는 아래 예시 참조
 
 예시:
 <!--
