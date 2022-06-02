@@ -24,13 +24,28 @@ Liquid is where Jekyll starts to get more interesting. It is a templating langua
 Liquid 언어는 Jekyll이 더 흥미를 얻기 시작하는 곳이다. Liquid 언어는 3가지 주요 구성요소들을 가진 템플릿 언어이다.
 
 ## Objects
-Objects tell Liquid to output predefined variables as content on a page. Use double curly braces for objects: "{{" and "}}".
+Objects tell Liquid to output predefined variables as content on a page. Use double curly braces for objects: 
+<!--
+"{{" and "}}".
+-->
 
-For example, "{{ page.title }}" displays the page.title variable.
+For example, 
+<!--
+"{{ page.title }}" 
+-->
+displays the page.title variable.
 
-Objects는 Liquid 언어에게 미리 정의된 변수들을 페이지 위의 내용으로써 출력하도록 지시한다. objects를 위해 두개의 중괄호를 사용해라: "{{" and "}}"
+Objects는 Liquid 언어에게 미리 정의된 변수들을 페이지 위의 내용으로써 출력하도록 지시한다. objects를 위해 두개의 중괄호를 사용해라: 
 
-예시, "{{ page.title }}"은 "page.title" 변수를 출력한다.
+<!--
+"{{" and "}}"
+-->
+
+예시, 
+<!--
+"{{ page.title }}"
+-->
+은 "page.title" 변수를 출력한다.
 
 단어
 tell: 지시하다
@@ -46,7 +61,10 @@ Objects(주어) tell(동사) Liquid(목적어) to output(출력 하도록) prede
 
 
 ## Tags
-Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: "{%" and "%}".
+Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: 
+<!--
+"{%" and "%}".
+-->
 
 For example:
 <!--
@@ -61,7 +79,10 @@ This displays the sidebar if the value of the show_sidebar page variable is true
 
 Learn more about the tags available in Jekyll here.
 
-Tags는 템플릿의 논리 연산과 제어 흐름을 정의한다. tags를 위해 중괄호와 % 문자들을 사용해라: "{%" 와 "%}".
+Tags는 템플릿의 논리 연산과 제어 흐름을 정의한다. tags를 위해 중괄호와 % 문자들을 사용해라: 
+<!--
+"{%" 와 "%}".
+-->
 
 예시:
 <!--
