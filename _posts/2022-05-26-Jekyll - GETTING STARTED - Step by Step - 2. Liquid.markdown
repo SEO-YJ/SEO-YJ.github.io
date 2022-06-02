@@ -63,7 +63,7 @@ Objects(주어) tell(동사) Liquid(목적어) to output(출력 하도록) prede
 ## Tags
 Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: 
 <!--
-"{%" and "%}".
+"{% and %}".
 -->
 
 For example:
