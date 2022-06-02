@@ -26,7 +26,7 @@ Liquid 언어는 Jekyll이 더 흥미를 얻기 시작하는 곳이다. Liquid �
 ## Objects
 Objects tell Liquid to output predefined variables as content on a page. Use double curly braces for objects: 
 <!--
-"{{" and "}}".
+"{{", "}}".
 -->
 
 For example, 
@@ -38,7 +38,7 @@ displays the page.title variable.
 Objects는 Liquid 언어에게 미리 정의된 변수들을 페이지 위의 내용으로써 출력하도록 지시한다. objects를 위해 두개의 중괄호를 사용해라: 
 
 <!--
-"{{" and "}}"
+"{{", "}}"
 -->
 
 예시, 
@@ -63,7 +63,7 @@ Objects(주어) tell(동사) Liquid(목적어) to output(출력 하도록) prede
 ## Tags
 Tags define the logic and control flow for templates. Use curly braces and percent signs for tags: 
 <!--
-"{% and %}".
+"{%, %}".
 -->
 
 For example:
