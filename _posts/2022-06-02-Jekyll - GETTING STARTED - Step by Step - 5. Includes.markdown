@@ -98,19 +98,9 @@ Try using the include tag to add the navigation to _layouts/default.html:
 
 include tag를 사용하여 _layouts/default.html 파일로의 네비게이션을 추가하는 것을 시도해봐라:
 
-
 <!--
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {% include "네비게이션.html %}      // include 태그 추가
-    {{ content }}
-  </body>
-</html>
+코드는
+블로그 업로드 에러 이슈로 인해 X
 -->
 
 Open http://localhost:4000 in your browser and try switching between the pages.
