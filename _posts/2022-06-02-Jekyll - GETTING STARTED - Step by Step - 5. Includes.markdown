@@ -82,9 +82,9 @@ Navigation source code can get complex, so sometimes it’s nice to move it into
 
 ## Include usagePermalink
 
-Create a file for the navigation at "_includes/navigation.html" with the following content:
+Create a file for the navigation at <!--_includes/navigation.html--> with the following content:
 
-다음 내용을 따라하여 "_includes/navigation.html" 파일에 네비게이션을 위한 파일을 생성해라.
+다음 내용을 따라하여 <!--_includes/navigation.html--> 파일에 네비게이션을 위한 파일을 생성해라.
 
 <!--
 <nav>
@@ -121,13 +121,13 @@ http://localhost:4000 링크를 브라우저에서 열고 페이지 사이를 �
 
 Let’s take this a step further and highlight the current page in the navigation.
 
-"_includes/navigation.html" needs to know the URL of the page it’s inserted into so it can add styling. Jekyll has useful variables available, one of which is "page.url".
+<!--_includes/navigation.html--> needs to know the URL of the page it’s inserted into so it can add styling. Jekyll has useful variables available, one of which is "page.url".
 
 Using "page.url" you can check if each link is the current page and color it red if true:
 
 한 단계 더 나아가서 네비게이션에 현재 페이지를 강조해보자.
 
-"_includes/navigation.html" 파일은 include가 삽입된 페이지의 URL을 아는 것이 필요하고 그러면 include는 스타일링을 추가할 수 있다. Jekyll은 유용한 변수들을 사용가능하고, 그 중에 하나가 "page.url"이다.
+<!--_includes/navigation.html--> 파일은 include가 삽입된 페이지의 URL을 아는 것이 필요하고 그러면 include는 스타일링을 추가할 수 있다. Jekyll은 유용한 변수들을 사용가능하고, 그 중에 하나가 "page.url"이다.
 
 "page.url" 변수를 사용하여 각 링크가 현재 페이지 인지를 체크할 수 있고, 해당 링크가 참일 경우 그 링크의 색깔을 빨간색으로 칠할 수 있다.
 
@@ -154,7 +154,7 @@ Why? 그냥 레이아웃에 navigation 추가해서 웹 페이지 간에 이동�
 A. 음,, include 폴더에 네비게이션 소스 코드를 적은 html 파일을 따로 저장해 놓으면, 코드를 분석할 때 쉬울 것 같다.
 그냥 네비게이션이 필요한 레이아웃이 적용된 페이지를 위해, 레이아웃에 include 태그만 적어주면 되니까.
 Why? include는 왜 페이지의 URL이 필요할까?
-A. include파일("_includes/navigation.html")을 확인해보니, index.html과 about.md의 주소가 a href 태그에 저장되어있음을 확인할 수 있다. 이를 통해, 이 태그가 둘러싸인 텍스트를 클릭하면 그 해당 URL 페이지로 이동하는 것 같다. 
+A. include파일(<!--_includes/navigation.html-->)을 확인해보니, index.html과 about.md의 주소가 a href 태그에 저장되어있음을 확인할 수 있다. 이를 통해, 이 태그가 둘러싸인 텍스트를 클릭하면 그 해당 URL 페이지로 이동하는 것 같다. 
 Why? 많은 페이지를 관리할 때, 페이지를 추가하거나, 색상 변경을 할 경우 중복된 코드가 발생하여 문제가 생긴다는데 왜그럴까?
 A. navigation.html 파일의 코드를 확인해보면,
 a href="\" if page.url~
