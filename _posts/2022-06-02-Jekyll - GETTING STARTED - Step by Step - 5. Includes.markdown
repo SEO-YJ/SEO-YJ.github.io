@@ -82,9 +82,9 @@ Navigation source code can get complex, so sometimes it’s nice to move it into
 
 ## Include usagePermalink
 
-Create a file for the navigation at navigation.html with the following content:
+Create a file for the navigation at navigation with the following content:
 
-다음 내용을 따라하여 navigation.html 파일에 네비게이션을 위한 파일을 생성해라.
+다음 내용을 따라하여 navigation 파일에 네비게이션을 위한 파일을 생성해라.
 
 <!--
 <nav>
@@ -107,7 +107,7 @@ include tag를 사용하여 _layouts/default.html 파일로의 네비게이션�
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {% include navigation.html %}      // include 태그 추가
+    {% include "네비게이션.html %}      // include 태그 추가
     {{ content }}
   </body>
 </html>
@@ -121,13 +121,13 @@ http://localhost:4000 링크를 브라우저에서 열고 페이지 사이를 �
 
 Let’s take this a step further and highlight the current page in the navigation.
 
-navigation.html needs to know the URL of the page it’s inserted into so it can add styling. Jekyll has useful variables available, one of which is "page.url".
+navigation needs to know the URL of the page it’s inserted into so it can add styling. Jekyll has useful variables available, one of which is "page.url".
 
 Using "page.url" you can check if each link is the current page and color it red if true:
 
 한 단계 더 나아가서 네비게이션에 현재 페이지를 강조해보자.
 
-navigation.html 파일은 include가 삽입된 페이지의 URL을 아는 것이 필요하고 그러면 include는 스타일링을 추가할 수 있다. Jekyll은 유용한 변수들을 사용가능하고, 그 중에 하나가 "page.url"이다.
+navigation 파일은 include가 삽입된 페이지의 URL을 아는 것이 필요하고 그러면 include는 스타일링을 추가할 수 있다. Jekyll은 유용한 변수들을 사용가능하고, 그 중에 하나가 "page.url"이다.
 
 "page.url" 변수를 사용하여 각 링크가 현재 페이지 인지를 체크할 수 있고, 해당 링크가 참일 경우 그 링크의 색깔을 빨간색으로 칠할 수 있다.
 
@@ -154,9 +154,9 @@ Why? 그냥 레이아웃에 navigation 추가해서 웹 페이지 간에 이동�
 A. 음,, include 폴더에 네비게이션 소스 코드를 적은 html 파일을 따로 저장해 놓으면, 코드를 분석할 때 쉬울 것 같다.
 그냥 네비게이션이 필요한 레이아웃이 적용된 페이지를 위해, 레이아웃에 include 태그만 적어주면 되니까.
 Why? include는 왜 페이지의 URL이 필요할까?
-A. include파일(navigation.html)을 확인해보니, index.html과 about.md의 주소가 a href 태그에 저장되어있음을 확인할 수 있다. 이를 통해, 이 태그가 둘러싸인 텍스트를 클릭하면 그 해당 URL 페이지로 이동하는 것 같다. 
+A. include파일(navigation)을 확인해보니, index.html과 about.md의 주소가 a href 태그에 저장되어있음을 확인할 수 있다. 이를 통해, 이 태그가 둘러싸인 텍스트를 클릭하면 그 해당 URL 페이지로 이동하는 것 같다. 
 Why? 많은 페이지를 관리할 때, 페이지를 추가하거나, 색상 변경을 할 경우 중복된 코드가 발생하여 문제가 생긴다는데 왜그럴까?
-A. navigation.html 파일의 코드를 확인해보면,
+A. navigation 파일의 코드를 확인해보면,
 a href="\" if page.url~
 로 링크마다 같은 구조의 코드가 작성되는 것을 확인할 수 있다.
 이러면 중복아닌가? 중복을 없애주어야 코드를 관리하기 용이하다.
@@ -220,9 +220,9 @@ take this a step further: 한 단계 더 나아가
 20. 로컬 웹 서버를 실행해보니, 이제 2개의 페이지가 생성됬다고 하는데 새로 생긴 페이지를 확인을 못하겠다.
 21. 루트 디렉토리의 레이아웃 폴더명을 "layouts" -> "_layouts"로 수정한 후 다시 로컬 웹 서버를 돌렸더니,
 http://localhost:4000/about.html 링크에서 about.md 파일의 웹 페이지를 확인할 수 있었다.
-22. 루트 디렉토리에 _includes 폴더를 생성 후, navigation.html 파일을 _includes 폴더 내에 생성하여,
+22. 루트 디렉토리에 _includes 폴더를 생성 후, navigation 파일을 _includes 폴더 내에 생성하여,
 index.html과 about.md 웹 페이지 간의 이동을 가능하게 해보자. 그러기 위해 include 태그를 사용하자.
 23. default.html 레이아웃 파일에 include tag를 추가하였다.
 24. default.html 레이아웃을 적용한 index.html, about.md 파일에 각각 웹 페이지를 이동하는 링크가 적용되어 서로의 페이지로 이동할 수 있다.
-25. include파일(navigation.html)에 1) 현재 페이지 확인 2) 색상 변경 스타일을 추가하였다.
+25. include파일(navigation)에 1) 현재 페이지 확인 2) 색상 변경 스타일을 추가하였다.
 
