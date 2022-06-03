@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Jekyll - GETTING STARTED - Step by Step Tutorial(1. Setup)"
+title:  "Jekyll - GETTING STARTED - Step by Step Tutorial - 1. Setup"
 date:   2022-05-25 14:59:00 +0900
 categories: Jekyll official documents
 ---
