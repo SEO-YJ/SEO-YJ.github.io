@@ -89,11 +89,11 @@ index.html과 about.md 웹 페이지 간의 이동을 가능하게 해보자. �
 
 
 ## Sass
-Inlining the styles used in "_includes 폴더의 navigation.html 파일"(adding or configuring within the same file) is not a best practice. Instead, let’s style the current page by defining our first class in a new css file instead.
-"_includes 폴더의 navigation.html 파일"(같은 파일 내에 추가하거나 구성하는 것) 내에 사용된 인라인 스타일은 가장 좋은 방법은 아니다. 대신에, 새로운 파일 대신에 우리의 첫 번째 class를 정의하여 현재 페이지를 스타일하자.
+Inlining the styles used in "_includes 폴더의 navigation 파일"(adding or configuring within the same file) is not a best practice. Instead, let’s style the current page by defining our first class in a new css file instead.
+"_includes 폴더의 navigation 파일"(같은 파일 내에 추가하거나 구성하는 것) 내에 사용된 인라인 스타일은 가장 좋은 방법은 아니다. 대신에, 새로운 파일 대신에 우리의 첫 번째 class를 정의하여 현재 페이지를 스타일하자.
 
-To do this, refer to the class (that you will configure in the next parts of this step) from within the navigation.html file by removing the code you added earlier (to color the current link red) and inserting the following code:
-이렇게 하려면, 이전에 추가한 코드를 제거하고(현재 링크를 빨간색으로 표기하기 위해) 다음 코드를 삽입하여 "navigation.html" 파일 내의 클래스(이 단계의 다음 부분에서 구성할 클래스)를 참조하라. 
+To do this, refer to the class (that you will configure in the next parts of this step) from within the navigation file by removing the code you added earlier (to color the current link red) and inserting the following code:
+이렇게 하려면, 이전에 추가한 코드를 제거하고(현재 링크를 빨간색으로 표기하기 위해) 다음 코드를 삽입하여 "navigation" 파일 내의 클래스(이 단계의 다음 부분에서 구성할 클래스)를 참조하라. 
 <!--
 <nav>
   {% for item in site.data.navigation %}
@@ -149,7 +149,7 @@ Open "_layouts 폴더에 default.html 파일" and add the stylesheet to the head
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    {% include navigation.html %}
+    {% include "파일이름" %} // navigation의 html 확장자파일
     {{ content }}
   </body>
 </html>
@@ -244,7 +244,7 @@ index.html과 about.md 웹 페이지 간의 이동을 가능하게 해보자. �
 25. include파일(navigation)에 1) 현재 페이지 확인 2) 색상 변경 스타일을 추가하였다.
 26. 루트 디렉토리의 data 폴더에 네비게이션을 위한 YAML파일을 생성하고, name과 link로 네비게이션 항목들을 리스트로 저장하였다.
 27. 루트 디렉토리에 assets(css, js, images)폴더와 _sass폴더를 생성하였다.
-28. include폴더의 navigation.html 코드 수정(style="color: red;" -> class="current"
+28. include폴더의 navigation 코드 수정(style="color: red;" -> class="current"
 29. assets -> css에 style.scss 파일을 생성(main.scss 파일 참조하는 파일 생성)
 30. _sass에 main.scss 파일을 생성
 31. Jekyll 정적사이트 생성기가 assets에 style.css파일을 생성하였다.
