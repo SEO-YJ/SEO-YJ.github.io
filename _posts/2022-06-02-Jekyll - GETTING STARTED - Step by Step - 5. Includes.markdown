@@ -15,7 +15,7 @@ Jekyll 공식문서 링크:
 
 # Step by Step Tutorial
 
-## Includes
+## 5. Includes
 The site is coming together; however, there’s no way to navigate between pages. Let’s fix that.
 
 Navigation should be on every page so adding it to your layout is the correct place to do this. Instead of adding it directly to the layout, let’s use this as an opportunity to learn about "includes".
