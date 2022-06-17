@@ -15,9 +15,9 @@ Jekyll 공식문서 링크:
 
 # Command Line Usage
 
-The "Jekyll" gem makes a jekyll executable available to you in your terminal.
+The Jekyll gem makes a "jekyll" executable available to you in your terminal.
 
-The "jekyll" program has several commands but the structure is always:
+The jekyll program has several commands but the structure is always:
 
 <!--
 jekyll command [argument] [option] [argument_to_option]
@@ -27,18 +27,92 @@ Examples:
     jekyll serve --config _alternative_config.yml
 -->
 
+Jekyll gem은 터미널에서 사용 할 수 있는 " jekyll" 실행파일을 만든다.
+
+"jekyll" 실행 파일은 여러 개의 명령어를 갖지만 구조는 항상 다음과 같다:
+
+<!--
+jekyll command [argument] [option] [argument_to_option]
+
+Examples:
+    jekyll new site/ --blank
+    jekyll serve --config _alternative_config.yml
+-->
+
+Typically you’ll use "jekyll serve" while developing locally and jekyll build when you need to generate the site for production.
+
+For a full list of options and their argument, see Build Command Options.
+
+For a full list of options and their argument, see Build Command Options.
+
+일반적으로 로컬에서 개발하는 동안에는 "jekyll serve" 명령을 사용하고 프로덕션 시 사이트를 생성할 때 "jekyll build" 명령을 사용한다.
+
+옵션의 모든 목록과 그것들의 인자를 위해, Build Command Options를 봐라.
+
+Here are some of the most common commands:
+
+다음은 가장 일반적인 명령들이다:
+
+jekyll new PATH - Creates a new Jekyll site with default gem-based theme at specified path. The directories will be created as necessary.
+
+jekyll new PATH - 지정된 경로에 기본 gem-based 테마로 새로운 Jekyll site를 생성하라. 폴더들은 필요한 경우에 생성될 것이다.
+
+jekyll new PATH --blank - Creates a new blank Jekyll site scaffold at specified path.
+
+jekyll new PATH --blank - 지정된 경로에 새로운 Jekyll site 빈 틀을 생성하라.
+
+jekyll build or jekyll b - Performs a one off build your site to ./_site (by default).
+
+jekyll build or jekyll b - 사이트를 (기본값으로) ./site 폴더에 한 번 빌드를 수행한다.
+
+jekyll serve or jekyll s - Builds your site any time a source file changes and serves it locally.
+
+jekyll serve or jekyll s - 소스 파일을 변경한 때에 사이트를 빌드하고 로컬 서버를 실행한다.
+
+jekyll clean - Removes all generated files: destination folder, metadata file, Sass and Jekyll caches.
+
+jekyll clean - 빌드 작업으로 생성된 모든 파일들을 제거한다: 결과 폴더, 메타 데이터 파일, Sass와 Jekyll 캐시 등.
+
+jekyll help - Shows help, optionally for a given subcommand, e.g. jekyll help build.
+
+jekyll help - 도움말을 보여주고, 선택적으로 subcommand가 제공된다, 예: "jekyll help build"
+
+jekyll new-theme - Creates a new Jekyll theme scaffold.
+
+jekyll new-theme - 새 Jekyll 테마 틀을 생성한다.
+
+jekyll doctor - Outputs any deprecation or configuration issues.
+
+jekyll doctor- 소스코드와 관련된 문제점이나 환경설정을 출력한다.
+
+To change Jekyll’s default build behavior have a look through the configuration options.
+
+Jekyll의 기본 빌드 방식을 바꾸고 싶으면 "configuration options"를 통해 찾아봐라.
+
 Why? 
 A. 
 
 
 
 단어
-
+executable: 실행 가능한
+typically: 일반적으로
+necessary: 필요한 경우
+any time: ~ 한 때에
+serve: 서버를 실행하다
+generated: 빌드 작업으로 생성된
+deprecation: 문제점
+behavior: 방식
 
 
 문법
 
 내 생각
+1. jekyll은 터미널에서 사용할 수 있는 jekyll이라는 실행파일 만들어준다는데, 어따가 쓰는 거지.
+2. jekyll 실행 파일로 터미널에서 명령을 수행할 수 있는 것인가?
+jekyll serve 같은 명령일 경우에 jekyll 실행파일에 저장되어있는 명령어 중 1개인 거 같다.
+3. jekyll 실행파일에는 jekyll 명령어들이 저장되어있고, 우리는 build 시에 이 명령어들을 사용하여 빌드할 수 있다.
+위 예시 명령어들의 기능을 살펴보고 사용하자.
 
 
 내 프로젝트 과정
