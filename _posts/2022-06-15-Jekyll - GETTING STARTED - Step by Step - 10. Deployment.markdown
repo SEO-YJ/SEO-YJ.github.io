@@ -110,7 +110,7 @@ For "jekyll-feed" and "jekyll-seo-tag" you need to add tags to "_layouts/default
     {% seo %}
   </head>
   <body>
-    {% include navigation html 파일 %}
+    // include 태그로 navigation.html 추가해야 되나 Github push 에러로 해당 라인 제거
     {{ content }}
   </body>
 </html>
