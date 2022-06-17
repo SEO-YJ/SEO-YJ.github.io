@@ -110,7 +110,7 @@ For "jekyll-feed" and "jekyll-seo-tag" you need to add tags to "_layouts/default
     {% seo %}
   </head>
   <body>
-    {% include navigation.html %}
+    {% include navigation html 파일 %}
     {{ content }}
   </body>
 </html>
